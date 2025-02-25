@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRA</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script> 
+</head>
+<body>
+
+  <div id="datetime"></div>
+
+  <div class="profile-container">
+    <img class="profile" src="pictures/profile.jpg" alt="Profile" onclick="openFullscreen('pictures/profile.jpg')">
+  </div>
+
+  <div class="fullscreen" id="fullscreen" onclick="closeFullscreen(event)">
+    <div class="fullscreen-content">
+      <img id="fullscreen-img" src="" alt="Profile">
+    </div>
+    <span class="close-btn" onclick="closeFullscreen(event)">&times;</span>
+  </div>
+
+  <img class="logo" src="pictures/logo.png" alt="Logo">
+  <h1>AMPRAZIS NIKOLAOS</h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills & Certifications</a></li>
+      <li><a href="gallery.html">Photo gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar">
+    <div class="sidebar-link">
+      <a href="https://www.linkedin.com/in/nikolaos-amprazis/" target="_blank">
+        <img src="pictures/linkedIn.png" alt="LinkedIn">
+        <div>LinkedIn</div>
+      </a>
+    </div>
+    <div class="sidebar-link">
+      <a href="https://github.com/it175107" target="_blank">
+        <img src="pictures/github.png" alt="GitHub">
+        <div>Github</div>
+      </a>
+    </div>
+       <div class="sidebar-link">
+    <a href="mailto:nikosabra28@gmail.com">
+        <img src="pictures/mail.jpg" alt="E-mail">
+        <div>E-mail</div>
+    </a>
+</div>
+  </div>
+
+  <div class="text-box">
+    <h2>Welcome to my Personal Website</h2>
+    <p>This site was originally created as part of a university project...</p>
+    <p>I've also included a gallery showcasing my travels...</p>
+    <p>Feel free to explore and get to know me better!</p>
+  </div>
+
+  <div class="copy">
+    <p>&copy;Copyright 2023 Nikolaos Amprazis</p>
+  </div>
+
+  <script>
+    function updateDateTime() {
+      var now = new Date();
+      var date = now.toLocaleDateString();
+      var options = { hour12: false };
+      var time = now.toLocaleTimeString(undefined, options);
+      var dateTimeString = date + ' ' + time;
+
+      document.getElementById('datetime').innerHTML = dateTimeString;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+function openFullscreen(imageSrc) {
+    const fullscreenContainer = document.getElementById('fullscreen');
+    const fullscreenImg = document.getElementById('fullscreen-img');
+
+    fullscreenImg.src = imageSrc; 
+    fullscreenContainer.style.display = 'flex'; 
+}
+
+function closeFullscreen(event) {
+    if (event.target === document.querySelector('.close-btn')) {
+        document.getElementById('fullscreen').style.display = 'none'; 
+    }
+}
+  </script>
+</body>
+</html>

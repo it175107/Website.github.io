@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRA</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="datetime"></div>
+
+  <div class="profile-container">
+    <img class="profile" src="pictures/profile.jpg" alt="Profile" onclick="openFullscreen('pictures/profile.jpg')">
+  </div>
+  <div class="fullscreen" id="fullscreen" onclick="closeFullscreen(event)">
+    <div class="fullscreen-content">
+      <img id="fullscreen-img" src="" alt="Profile">
+    </div>
+    <span class="close-btn" onclick="closeFullscreen(event)">&times;</span>
+  </div>
+
+  <img class="logo" src="pictures/logo.png" alt="Logo">
+  <h1>AMPRAZIS NIKOLAOS</h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills & Certifications</a></li>
+      <li><a href="gallery.html">Photo gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar">
+    <div class="sidebar-link">
+      <a href="https://www.linkedin.com/in/nikolaos-amprazis/" target="_blank">
+        <img src="pictures/linkedIn.png" alt="LinkedIn">
+        <div>LinkedIn</div>
+      </a>
+    </div>
+    <div class="sidebar-link">
+      <a href="https://drive.google.com/drive/folders/1T1QVIDIjFE3CzM6n87VlrTqyD1kAFEfo?usp=sharing" target="_blank">
+        <img src="pictures/link.png" alt="DRIVE">
+        <div>DRIVE</div>
+      </a>
+    </div>
+     <div class="sidebar-link">
+      <a href="https://www.iee.ihu.gr/" target="_blank">
+        <img src="pictures/ihu.jpg" alt="IHU">
+        <div>IHU</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="text-box">
+    <p>
+        I possess skills in CSS, HTML, JavaScript, as well as proficiency in MS Word, Excel, PowerPoint, and basic SQL.
+    </p>
+    <p>In terms of certifications, I have completed courses in IT Basics, HTML Advanced, CSS, and JavaScript through Programming Hub. Additionally, I earned a certification in Website Creation from Grow with Google.
+    </p>
+    <p>Currently, I am further advancing my expertise by taking the CompTIA A+ IT Support seminar.</p>
+  </div>
+
+  <div class="copy">
+    <p>&copy;Copyright 2023 Nikolaos Amprazis</p>
+  </div>
+
+  <script>
+    function updateDateTime() {
+        var now = new Date();
+        var date = now.toLocaleDateString();
+        var options = { hour12: false };
+        var time = now.toLocaleTimeString(undefined, options);
+        var dateTimeString = date + ' ' + time;
+
+        document.getElementById('datetime').innerHTML = dateTimeString;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+
+function openFullscreen(imageSrc) {
+    const fullscreenContainer = document.getElementById('fullscreen');
+    const fullscreenImg = document.getElementById('fullscreen-img');
+
+    fullscreenImg.src = imageSrc; 
+    fullscreenContainer.style.display = 'flex'; 
+}
+
+function closeFullscreen(event) {
+    if (event.target === document.querySelector('.close-btn')) {
+        document.getElementById('fullscreen').style.display = 'none'; 
+    }
+}
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABRA</title>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div id="datetime"></div>
+
+    <div class="profile-container">
+        <img class="profile" src="pictures/profile.jpg" alt="Profile" onclick="openFullscreen('pictures/profile.jpg')">
+    </div>
+
+    <div class="fullscreen" id="fullscreen" onclick="closeFullscreen(event)">
+        <div class="fullscreen-content">
+            <img id="fullscreen-img" src="" alt="Profile">
+        </div>
+        <span class="close-btn" onclick="closeFullscreen(event)">&times;</span>
+    </div>
+
+    <img class="logo" src="pictures/logo.png" alt="Logo">
+    <h1 class="h1">AMPRAZIS NIKOLAOS</h1>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Hobby</a></li>
+            <li><a href="gallery.html">Photo gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="sidebar">
+        <div class="sidebar-link">
+            <a href="https://www.linkedin.com/in/nikolaos-amprazis/" target="_blank">
+                <img src="pictures/linkedIn.png" alt="LinkedIn">
+                <div>LinkedIn</div>
+            </a>
+        </div>
+        <div class="sidebar-link">
+    <a href="mailto:nikosabra28@gmail.com">
+        <img src="pictures/mail.jpg" alt="E-mail">
+        <div>E-mail</div>
+    </a>
+</div>
+ <div class="sidebar-link">
+      <a href="https://www.iee.ihu.gr/" target="_blank">
+        <img src="pictures/ihu.jpg" alt="IHU">
+        <div>IHU</div>
+      </a>
+    </div>
+
+    </div>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="1da6fba8-c21f-42be-bdca-db766f902430">
+            <input type="text" name="name" placeholder="Your name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="pictures/arrow_icon.png" alt="Arrow"></button>
+        </form>
+    </div>
+
+    <div class="copy">
+        <p><strong>&copy;Copyright 2023 Nikos Amprazis</strong></p>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var options = { hour12: false };
+            var time = now.toLocaleTimeString(undefined, options);
+            var dateTimeString = date + ' ' + time;
+
+            document.getElementById('datetime').innerHTML = dateTimeString;
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+function openFullscreen(imageSrc) {
+    const fullscreenContainer = document.getElementById('fullscreen');
+    const fullscreenImg = document.getElementById('fullscreen-img');
+
+    fullscreenImg.src = imageSrc; 
+    fullscreenContainer.style.display = 'flex'; 
+}
+function closeFullscreen(event) {
+   
+    if (event.target === document.querySelector('.close-btn')) {
+        document.getElementById('fullscreen').style.display = 'none'; 
+    }
+}
+</script>
+  </body>
+</html>
