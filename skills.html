@@ -38,50 +38,37 @@
   <a href="Nikolaos Amprazis-CV.pdf" target="_blank">My CV</a>
   <a href="https://www.linkedin.com/in/nikolaos-amprazis/" target="_blank">LinkedIn</a>
   <a href="https://www.iee.ihu.gr/" target="_blank">IHU</a>
-  <a href="mailto:nikosabra28@gmail.com" target="_blank">Email</a>
+  <a href="https://github.com/it175107" target="_blank">Github</a>
 </div>
 
 <div class="text-box">
   <div class="lists-container">
     <div class="list-section">
-      <h2>🛠 Technical Skills</h2>
-      <ul>
-        <li>Web: HTML, CSS, JavaScript</li>
-        <li>Office: MS Word, Excel, PowerPoint</li>
-        <li>Databases: Basic SQL</li>
-      </ul>
-    </div>
-
-    <div class="list-section">
-      <h2>📜 Certifications</h2>
-      <ul>
-        <li>
-          IT Basics – Programming Hub<br>
-          <a href="https://drive.google.com/file/d/1jiGM4HGjqWikjN8GuTbOtKkCKtPHedQf/view?usp=drive_link" target="_blank">[View Certificate]</a>
-        </li>
-        <li>
-          HTML – Programming Hub<br>
-          <a href="https://drive.google.com/file/d/1habm9V4tGEuU1EJQsU0B4vBHy0Ou3zPU/view?usp=drive_link" target="_blank">[View Certificate]</a>
-        </li>
-        <li>
-          CSS – Programming Hub<br>
-          <a href="https://drive.google.com/file/d/1WoVdNG3y8WBd_SYz-MM1uj-HvzG69qOd/view?usp=drive_link"_blank">[View Certificate]</a>
-        </li>
-        <li>
-          JavaScript – Programming Hub<br>
-          <a href="https://drive.google.com/file/d/1FdR7oLTihxL6uMDZuU_1aq9LFq2DWtWc/view?usp=drive_link" target="_blank">[View Certificate]</a>
-        </li>
-        <li>
-          Computer Technical - LabTech<br>
-          <a href="https://drive.google.com/file/d/18tF_yOhEqJf3DxrEL7eaWxXTywKYiWxp/view?usp=drive_link" target="_blank"> [View Certificate]</a>
-        </li>
-      </ul>
+        <h2>🛠 Technical Skills &amp; 📜 Certifications</h2>
+  <p>I have experience in web development using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, as well as proficiency in <strong>Microsoft Office tools</strong> including <strong>Word</strong>, <strong>Excel</strong>, and <strong>PowerPoint</strong>. Additionally, I possess a basic understanding of <strong>SQL</strong> and database concepts.</p>
+</div>
+      
+      <div class="cert-columns">
+        <ul>
+          <li>Computer Technical - LabTech<br><a href="https://drive.google.com/file/d/18tF_yOhEqJf3DxrEL7eaWxXTywKYiWxp/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>IT Basics – Programming Hub<br><a href="https://drive.google.com/file/d/1iPuHmYlyozHmGjouVE1N1Udv9MNfUr-h/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>HTML – Programming Hub<br><a href="https://drive.google.com/file/d/1WedGKTEVlMGAQpKA5buid1gZQnr1G0o0/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>CSS – Programming Hub<br><a href="https://drive.google.com/file/d/1r9qe0hroxygVjYQaE0M_x8oeV68mehjV/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>JavaScript – Programming Hub<br><a href="https://drive.google.com/file/d/1cNo0-q3GqRA89dxpsOg6Vi4k90i0DB6M/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+        </ul>
+        <ul>
+          <li>HTML Advanced – Programming Hub<br><a href="https://drive.google.com/file/d/1JPv5wsgQmP9SzHZ5Q3-lpalnuv4bO35a/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>Artificial Intelligence & Digital Creativity - Skillbox<br><a href="https://drive.google.com/file/d/1iviGrqvuVPU1a0z2Isx1AAgoGO6FDQmW/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>Webpage creation - Grow with Google<br><a href="https://drive.google.com/file/d/1Btglzu7nLYK5TM7CGc0y15n997hqyPc1/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+          <li>CV & LinkedIn profile creation - Grow with Google<br><a href="https://drive.google.com/file/d/1EHiGpVa4d-x6oI0Om5V5LNv_A0YefzXB/view?usp=drive_link" target="_blank">[View Certificate]</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
   <div class="copy">
-    <p>&copy;Copyright 2023 Nikolaos Amprazis</p>
+    <p>&copy; Copyright 2023 Nikolaos Amprazis</p>
   </div>
 
   <script>
@@ -91,25 +78,23 @@
         var options = { hour12: false };
         var time = now.toLocaleTimeString(undefined, options);
         var dateTimeString = date + ' ' + time;
-
         document.getElementById('datetime').innerHTML = dateTimeString;
     }
     updateDateTime();
     setInterval(updateDateTime, 1000);
 
-function openFullscreen(imageSrc) {
-    const fullscreenContainer = document.getElementById('fullscreen');
-    const fullscreenImg = document.getElementById('fullscreen-img');
-
-    fullscreenImg.src = imageSrc; 
-    fullscreenContainer.style.display = 'flex'; 
-}
-
-function closeFullscreen(event) {
-    if (event.target === document.querySelector('.close-btn')) {
-        document.getElementById('fullscreen').style.display = 'none'; 
+    function openFullscreen(imageSrc) {
+      const fullscreenContainer = document.getElementById('fullscreen');
+      const fullscreenImg = document.getElementById('fullscreen-img');
+      fullscreenImg.src = imageSrc;
+      fullscreenContainer.style.display = 'flex';
     }
-}
+
+    function closeFullscreen(event) {
+      if (event.target === document.querySelector('.close-btn')) {
+        document.getElementById('fullscreen').style.display = 'none';
+      }
+    }
   </script>
 </body>
 </html>
