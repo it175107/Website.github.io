@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -272,14 +273,18 @@
   background-color: #0056b3;
 }
 
-    .lists-container {
+.lists-container {
   display: flex;
-  gap: 40px; /* space between the two lists */
+  flex-wrap: wrap; /* This is important */
+  gap: 40px;
+  justify-content: center; /* Optional: keeps things centered */
 }
 
+
 .list-section {
-  flex: 1; /* both take equal width */
+  flex: 1 1 300px; /* Minimum 300px, grow if needed */
 }
+
 
 main {
   flex-grow: 1;
@@ -322,6 +327,34 @@ main {
       font-size: 24px;
       color: black;
     }
+
+.cert-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cert-columns ul {
+  flex: 1;
+  min-width: 220px; /* force horizontal layout */
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.cert-columns li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .lists-container {
+    flex-direction: column;
+  }
+  .cert-columns {
+    flex-direction: column;
+  }
+}
+
 
 .contact-container {
   height: 460px;
