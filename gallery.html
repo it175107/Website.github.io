@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABRA</title>
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+  <div id="datetime"></div>
+
+  <div class="profile-container">
+    <img class="profile" src="pictures/profile.jpg" alt="Profile" data-src="pictures/profile.jpg" data-caption="This in me,Nikolaos Amprazis">
+  </div>
+
+  <div class="fullscreen" id="profile-fullscreen">
+    <div class="fullscreen-content">
+      <img id="profile-fullscreen-img" src="" alt="">
+      <p id="profile-fullscreen-caption"></p>
+    </div>
+    <span class="close-btn" onclick="closeFullscreen('profile-fullscreen')">&times;</span>
+  </div>
+
+  <img class="logo" src="pictures/logo.png" alt="Logo">
+  <h1>AMPRAZIS NIKOLAOS</h1>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills & Certifications</a></li>
+      <li><a href="gallery.html">Photo gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<div class="container">
+    <div class="gallery">
+        <img src="pictures/image1.jpg" class="gallery-img" alt="Location 1" data-src="pictures/image1.jpg" data-caption="Location 1: Athens">
+        <img src="pictures/image2.jpg" class="gallery-img" alt="Location 2" data-src="pictures/image2.jpg" data-caption="Location 2: Crete">
+        <img src="pictures/image3.jpg" class="gallery-img" alt="Location 3" data-src="pictures/image3.jpg" data-caption="Location 3: Nafplio">
+        <img src="pictures/image4.jpg" class="gallery-img" alt="Location 4" data-src="pictures/image4.jpg" data-caption="Location 4: Corfu">
+        <img src="pictures/image5.jpg" class="gallery-img" alt="Location 5" data-src="pictures/image5.jpg" data-caption="Location 5: Volos">
+        <img src="pictures/image6.jpg" class="gallery-img" alt="Location 6" data-src="pictures/image6.jpg" data-caption="Location 6: Ioannina">
+        <img src="pictures/image7.jpg" class="gallery-img" alt="Location 7" data-src="pictures/image7.jpg" data-caption="Location 7: Arta">
+        <img src="pictures/image8.jpg" class="gallery-img" alt="Location 8" data-src="pictures/image8.jpg" data-caption="Location 8: Kavala">
+        <img src="pictures/image9.jpg" class="gallery-img" alt="Location 9" data-src="pictures/image9.jpg" data-caption="Location 9: Serres">
+        <img src="pictures/image10.jpg" class="gallery-img" alt="Location 10" data-src="pictures/image10.jpg" data-caption="Location 10: Thassos">
+        <img src="pictures/image11.jpg" class="gallery-img" alt="Location 11" data-src="pictures/image11.jpg" data-caption="Location 11: Kastoria">
+        <img src="pictures/image12.jpg" class="gallery-img" alt="Location 12" data-src="pictures/image12.jpg" data-caption="Location 12: Florina">
+        <img src="pictures/image13.jpg" class="gallery-img" alt="Location 13" data-src="pictures/image13.jpg" data-caption="Location 13: Larissa">
+        <img src="pictures/image14.jpg" class="gallery-img" alt="Location 14" data-src="pictures/image14.jpg" data-caption="Location 14: Patras">
+        <img src="pictures/image15.jpg" class="gallery-img" alt="Location 15" data-src="pictures/image15.jpg" data-caption="Location 15: Halkidiki">
+        <img src="pictures/image16.jpg" class="gallery-img" alt="Location 16" data-src="pictures/image16.jpg" data-caption="Location 16: Edessa">
+        <img src="pictures/image17.jpg" class="gallery-img" alt="Location 17" data-src="pictures/image17.jpg" data-caption="Location 17: Kaimaktsalan">
+        <img src="pictures/image18.jpg" class="gallery-img" alt="Location 18" data-src="pictures/image18.jpg" data-caption="Location 18: Istanbul">
+        <img src="pictures/image19.jpg" class="gallery-img" alt="Location 19" data-src="pictures/image19.jpg" data-caption="Location 19: Barcelona">
+        <img src="pictures/image20.jpg" class="gallery-img" alt="Location 20" data-src="pictures/image20.jpg" data-caption="Location 20: Budapest">
+        <img src="pictures/image21.jpg" class="gallery-img" alt="Location 21" data-src="pictures/image21.jpg" data-caption="Location 21: Bucharest">
+        <img src="pictures/image22.jpg" class="gallery-img" alt="Location 22" data-src="pictures/image22.jpg" data-caption="Location 22: Vienna">
+        <img src="pictures/image23.jpg" class="gallery-img" alt="Location 23" data-src="pictures/image23.jpg" data-caption="Location 23: Krakow">
+        <img src="pictures/image24.jpg" class="gallery-img" alt="Location 24" data-src="pictures/image24.jpg" data-caption="Location 24: Stuttgart">
+        <img src="pictures/image27.jpg" class="gallery-img" alt="Location 25" data-src="pictures/image27.jpg" data-caption="Location 25: Luxembourg">
+    </div>
+  </div>
+
+<div class="fullscreen" id="gallery-fullscreen">
+  <div class="fullscreen-content">
+    <img id="gallery-fullscreen-img" src="" alt="">
+    <p id="gallery-fullscreen-caption"></p> 
+    <span class="arrow left-arrow" onclick="changeImage('prev')">&#10094;</span>
+    <span class="arrow right-arrow" onclick="changeImage('next')">&#10095;</span>
+  </div>
+  <span class="close-btn" onclick="closeFullscreen('gallery-fullscreen')">&times;</span>
+</div>
+</div>
+
+  <div class="copy">
+    <p>&copy;Copyright 2023 Nikolaos Amprazis</p>
+  </div>
+
+</body>
+</html>
